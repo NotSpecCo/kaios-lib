@@ -1,4 +1,5 @@
 export * from './Battery';
+export * from './CallbackFn';
 export * from './Connection';
 export * from './DomApplication';
 export * from './FileSearchResult';
