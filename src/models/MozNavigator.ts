@@ -2,6 +2,7 @@ import { StorageName } from '../enums/StorageName';
 import { Battery } from './Battery';
 import { Connection } from './Connection';
 import { DomApplication } from './DomApplication';
+import { MozDeviceStorage } from './MozDeviceStorage';
 import { Request } from './Request';
 
 export type MozNavigator = Navigator & {
@@ -10,14 +11,7 @@ export type MozNavigator = Navigator & {
   };
   battery: Battery;
   connection: Connection;
-  getDeviceStorage: (name: StorageName) => {
-    storageName: string;
-    get: (filePath: string) => Request<File>;
-    addNamed: (file: File | Blob, filePath: string) => Request<File>;
-    appendNamed: (file: File | Blob, filePath: string) => Request<File>;
-    delete: (filePath: string) => Request<void>;
-    enumerate: any;
-  };
+  getDeviceStorage: (name: StorageName) => MozDeviceStorage;
   volumeManager: {
     requestUp: () => void;
     requestDown: () => void;
