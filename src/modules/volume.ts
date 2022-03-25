@@ -3,16 +3,16 @@ import { Navigator } from './navigator';
 export class Volume {
   up(): Promise<void> {
     Navigator.navigator.volumeManager.requestUp();
-    return;
+    return Promise.resolve();
   }
 
   down(): Promise<void> {
     Navigator.navigator.volumeManager.requestDown();
-    return;
+    return Promise.resolve();
   }
 
   show(): Promise<void> {
     Navigator.navigator.volumeManager.requestShow();
-    return;
+    return Promise.resolve();
   }
 }

@@ -3,6 +3,6 @@ export class LocalStorage {
     window.localStorage.setItem(key, JSON.stringify(data));
   }
   getItem<T>(key: string): T | null {
-    return JSON.parse(window.localStorage.getItem(key));
+    return JSON.parse(window.localStorage.getItem(key) as string);
   }
 }
