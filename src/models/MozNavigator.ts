@@ -18,4 +18,6 @@ export type MozNavigator = Navigator & {
     requestShow: () => void;
   };
   geolocation: any;
+  mozAlarms: any;
+  mozSetMessageHandler: any;
 };

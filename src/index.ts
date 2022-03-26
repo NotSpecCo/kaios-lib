@@ -1,3 +1,4 @@
+import { Alarm } from './modules/alarm';
 import { App } from './modules/app';
 import { Battery } from './modules/battery';
 import { FileStorage } from './modules/fileStorage';
@@ -13,6 +14,7 @@ export * from './modules/localStorage';
 export * from './modules/volume';
 
 export default class KaiOS {
+  static Alarm = Alarm;
   static App = App;
   static Battery = Battery;
   static FileStorage = FileStorage;

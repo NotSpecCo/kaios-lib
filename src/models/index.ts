@@ -1,3 +1,4 @@
+export * from './AlarmData';
 export * from './BatteryStatus';
 export * from './CallbackFn';
 export * from './Connection';
