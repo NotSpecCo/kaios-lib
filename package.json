@@ -19,8 +19,11 @@
     "README.md"
   ],
   "scripts": {
-    "build": "tsc",
-    "prepare": "npm run clean && npm run build",
+    "dev": "npm run clean && concurrently --kill-others \"npm run build-lib -- --watch --sourcemap\" \"npm run build-types -- --watch\"",
+    "build": "npm run clean && npm run build-lib -- --minify && npm run build-types",
+    "build-lib": "esbuild --outdir=lib --target=es6 src/*.ts src/**/*.ts",
+    "build-types": "tsc --emitDeclarationOnly",
+    "prepare": "npm run build",
     "commit": "cz",
     "clean": "rimraf ./lib"
   },
@@ -33,7 +36,9 @@
     "@semantic-release/exec": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
     "commitizen": "^4.2.4",
+    "concurrently": "^7.0.0",
     "cz-conventional-changelog": "^3.3.0",
+    "esbuild": "^0.14.27",
     "rimraf": "^3.0.2",
     "semantic-release": "^19.0.2",
     "typescript": "^4.6.2"
