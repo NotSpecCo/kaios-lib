@@ -1,3 +1,11 @@
+# [1.1.0](https://github.com/garredow/kaios-lib/compare/v1.0.0...v1.1.0) (2022-03-26)
+
+
+### Features
+
+* **app:** add app module ([1cf31a1](https://github.com/garredow/kaios-lib/commit/1cf31a138626d97f24c8a1eced87cdc898dc3f06))
+* **geolocation:** add geolocation module ([69b954d](https://github.com/garredow/kaios-lib/commit/69b954d32a5ce3c57146b9618400451eb7824f2b))
+
 # 1.0.0 (2022-03-25)
 
 
