@@ -13,34 +13,34 @@ A standard library to interact with KaiOS 2.x and 3.x\* APIs.
 
 ```js
 // Create the service
-const service = new KaiOS.Activity({
+const activity = new KaiOS.Activity({
   name: 'toolbox/qr-to-text',
   data: {},
 });
 
 // Send the request and await the result
-const result = await service.start();
+const result = await activity.start();
 ```
 
 ### Alarm
 
 ```js
 // Create the service
-const service = new KaiOS.Alarm();
+const alarms = new KaiOS.Alarm();
 
 // Add an alarm
-await service.add({
+await alarms.add({
   date: new Date(Date.now() + 1000 * 10),
   respectTimezone: true,
   data: { name: 'Garrett' },
 });
 
 // List all alarms
-const alarms = await service.getAll();
-console.log('alarms', alarms);
+const all = await alarms.getAll();
+console.log('alarms', all);
 
 // Subscribe to when an alarm is fired
-service.subscribe((data) => console.log('alarm fired', data));
+alarms.subscribe((data) => console.log('alarm fired', data));
 ```
 
 ### App
@@ -53,16 +53,16 @@ service.subscribe((data) => console.log('alarm fired', data));
 
 ```js
 // Create the service
-const service = new KaiOS.Battery();
+const battery = new KaiOS.Battery();
 
 // Get the current battery status
-const current = await service.current();
+const current = await battery.current();
 
 // Subscribe to changes (fires on level and charging change)
-service.subscribe((status) => console.log('battery status', status));
+battery.subscribe((status) => console.log('battery status', status));
 
 // Unsubscribe when you don't need it anymore
-service.unsubscribe();
+battery.unsubscribe();
 ```
 
 ### FileStorage
@@ -75,56 +75,56 @@ service.unsubscribe();
 
 ```js
 // Create the service
-const service = new KaiOS.Geolocation();
+const geolocation = new KaiOS.Geolocation();
 
 // Get current position
-const current = await service.current();
+const current = await geolocation.current();
 
 // Subscribe to changes
-service.subscribe((position) => {
+geolocation.subscribe((position) => {
   console.log('got position', position);
 });
 
 // Unsubscribe when you don't need it anymore
-service.unsubscribe();
+geolocation.unsubscribe();
 ```
 
 ### LocalStorage
 
 ```js
 // Create the service
-const service = new KaiOS.LocalStorage();
+const localStorage = new KaiOS.LocalStorage();
 
 // Write to storage. Will use `JSON.stringify` on object passed in
-service.setItem('myKey', { name: 'Garrett' });
+localStorage.setItem('myKey', { name: 'Garrett' });
 
 // Retrieve data
-const data = service.getItem('myKey');
+const data = localStorage.getItem('myKey');
 ```
 
 ### Network
 
 ```js
 // Create the service
-const service = new KaiOS.Network();
+const network = new KaiOS.Network();
 
 // Get current status
-const current = await service.current();
+const current = await network.current();
 
 // Subscribe to changes
-service.subscribe((status) => console.log('got status', status));
+network.subscribe((status) => console.log('got status', status));
 
 // Unsubscribe when you don't need it anymore
-service.unsubscribe();
+network.unsubscribe();
 ```
 
 ### Volume
 
 ```js
 // Create the service
-const service = new KaiOS.Volume();
+const volume = new KaiOS.Volume();
 
-await service.show();
-await service.up();
-await service.down();
+await volume.show();
+await volume.up();
+await volume.down();
 ```
