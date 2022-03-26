@@ -6,6 +6,7 @@ import { Geolocation } from './modules/geolocation';
 import { LocalStorage } from './modules/localStorage';
 import { Volume } from './modules/volume';
 
+export * from './modules/alarm';
 export * from './modules/app';
 export * from './modules/battery';
 export * from './modules/fileStorage';
