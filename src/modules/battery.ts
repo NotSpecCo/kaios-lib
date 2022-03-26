@@ -9,16 +9,14 @@ export class Battery {
     });
   }
 
-  subscribe(success: (data: BatteryStatus) => void): () => void {
+  subscribe(success: (data: BatteryStatus) => void): void {
     Navigator.navigator.battery.onlevelchange = () => success(this.getStatus());
     Navigator.navigator.battery.onchargingchange = () => success(this.getStatus());
+  }
 
-    const unsubscribe = () => {
-      Navigator.navigator.battery.onlevelchange = null;
-      Navigator.navigator.battery.onchargingchange = null;
-    };
-
-    return unsubscribe;
+  unsubscribe(): void {
+    Navigator.navigator.battery.onlevelchange = null;
+    Navigator.navigator.battery.onchargingchange = null;
   }
 
   private getStatus(): BatteryStatus {

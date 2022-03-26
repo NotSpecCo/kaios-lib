@@ -51,11 +51,8 @@ export class Alarm {
     });
   }
 
-  subscribe(success: (data: AlarmData) => void): () => void {
+  subscribe(success: (data: AlarmData) => void): void {
     Navigator.navigator.mozSetMessageHandler('alarm', (alarm: any) => success(alarm));
-    const unsubscribe = () => Navigator.navigator.mozSetMessageHandler('alarm', null);
-
-    return unsubscribe;
   }
 
   unsubscribe(): void {

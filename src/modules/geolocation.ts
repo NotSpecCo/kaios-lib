@@ -7,6 +7,12 @@ type Options = {
 };
 
 export class Geolocation {
+  subscriptionId: number | null;
+
+  constructor() {
+    this.subscriptionId = null;
+  }
+
   current(options?: Options): Promise<Location> {
     return new Promise((resolve, reject) => {
       Navigator.navigator.geolocation.getCurrentPosition(
@@ -21,9 +27,14 @@ export class Geolocation {
     success: (data: Location) => void,
     error?: (err: Error) => void,
     options?: Options
-  ): () => void {
-    const id = Navigator.navigator.geolocation.watchPosition(success, error, options);
-    const unsubscribe = () => Navigator.navigator.geolocation.clearWatch(id);
-    return unsubscribe;
+  ): void {
+    if (this.subscriptionId !== null) {
+      this.unsubscribe();
+    }
+    this.subscriptionId = Navigator.navigator.geolocation.watchPosition(success, error, options);
+  }
+
+  unsubscribe(): void {
+    Navigator.navigator.geolocation.clearWatch(this.subscriptionId);
   }
 }
