@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/garredow/kaios-lib/compare/v1.4.0...v1.5.0) (2022-03-26)
+
+
+### Features
+
+* **activity:** add activity module ([9d99ec5](https://github.com/garredow/kaios-lib/commit/9d99ec5c6b6e00ab67da8338cf805dc9d81d050d))
+
 # [1.4.0](https://github.com/garredow/kaios-lib/compare/v1.3.0...v1.4.0) (2022-03-26)
 
 
