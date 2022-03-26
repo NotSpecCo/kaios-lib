@@ -1,3 +1,12 @@
+# [1.2.0](https://github.com/garredow/kaios-lib/compare/v1.1.0...v1.2.0) (2022-03-26)
+
+
+### Features
+
+* **alarm:** add alarm module ([951a14b](https://github.com/garredow/kaios-lib/commit/951a14bc6f868d29ffbedbc95ac181c3a2887c86))
+* **battery:** refactor to use standard interface ([f30e6f5](https://github.com/garredow/kaios-lib/commit/f30e6f584598c73a9fe2a6c4f73f77141e5e06f3))
+* **geolocation:** add subscribe method ([823b7c4](https://github.com/garredow/kaios-lib/commit/823b7c4365b9ff3072819d5d8fdddc350c5f19f4))
+
 # [1.1.0](https://github.com/garredow/kaios-lib/compare/v1.0.0...v1.1.0) (2022-03-26)
 
 
