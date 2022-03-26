@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/garredow/kaios-lib/compare/v1.3.0...v1.4.0) (2022-03-26)
+
+
+### Features
+
+* **network:** add network module ([0b968ee](https://github.com/garredow/kaios-lib/commit/0b968ee01fbfc1a9a3c24d8f8748c1601ac3e8b8))
+
 # [1.3.0](https://github.com/garredow/kaios-lib/compare/v1.2.0...v1.3.0) (2022-03-26)
 
 
