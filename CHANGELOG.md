@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/garredow/kaios-lib/compare/v1.2.0...v1.3.0) (2022-03-26)
+
+
+### Features
+
+* **modules:** use new unsubscribe method ([14dd6a1](https://github.com/garredow/kaios-lib/commit/14dd6a1769f0d1c26cd8d22bf0f7734097735f65))
+
 # [1.2.0](https://github.com/garredow/kaios-lib/compare/v1.1.0...v1.2.0) (2022-03-26)
 
 
