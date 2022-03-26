@@ -1,9 +1,11 @@
-export type Battery = {
+export type MozBattery = {
   charging: boolean;
   level: number;
   temperature: number;
-  onlevelchange: () => void;
-  onchargingchange: () => void;
+  health: string;
+  present: boolean;
+  onlevelchange: (() => void) | null;
+  onchargingchange: (() => void) | null;
   addEventListener: (event: string, cb: () => void) => void;
   removeEventListener: (event: string, cb: () => void) => void;
 };
