@@ -17,4 +17,5 @@ export type MozNavigator = Navigator & {
     requestDown: () => void;
     requestShow: () => void;
   };
+  geolocation: any;
 };

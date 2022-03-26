@@ -3,6 +3,7 @@ export * from './CallbackFn';
 export * from './Connection';
 export * from './DomApplication';
 export * from './FileSearchResult';
+export * from './Location';
 export * from './Manifest';
 export * from './MozDeviceStorage';
 export * from './MozNavigator';
