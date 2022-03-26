@@ -9,6 +9,19 @@ A standard library to interact with KaiOS 2.x and 3.x\* APIs.
 
 ## Examples
 
+### Activity
+
+```js
+// Create the service
+const service = new KaiOS.Activity({
+  name: 'toolbox/qr-to-text',
+  data: {},
+});
+
+// Send the request and await the result
+const result = await service.start();
+```
+
 ### Alarm
 
 ```js
