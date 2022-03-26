@@ -9,4 +9,5 @@ export * from './Manifest';
 export * from './MozBattery';
 export * from './MozDeviceStorage';
 export * from './MozNavigator';
+export * from './NetworkStatus';
 export * from './Request';

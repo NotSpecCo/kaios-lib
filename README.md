@@ -89,6 +89,22 @@ service.setItem('myKey', { name: 'Garrett' });
 const data = service.getItem('myKey');
 ```
 
+### Network
+
+```js
+// Create the service
+const service = new KaiOS.Network();
+
+// Get current status
+const current = await service.current();
+
+// Subscribe to changes
+service.subscribe((status) => console.log('got status', status));
+
+// Unsubscribe when you don't need it anymore
+service.unsubscribe();
+```
+
 ### Volume
 
 ```js

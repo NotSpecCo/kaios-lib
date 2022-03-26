@@ -20,4 +20,4 @@ export type MozNavigator = Navigator & {
   geolocation: any;
   mozAlarms: any;
   mozSetMessageHandler: any;
-};
+} & any;
