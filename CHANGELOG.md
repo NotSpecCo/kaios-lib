@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/garredow/kaios-lib/compare/v1.5.0...v1.6.0) (2022-04-02)
+
+
+### Features
+
+* **qrcode:** add qr code module ([4df2c42](https://github.com/garredow/kaios-lib/commit/4df2c42c8b7ccdfebfb26fa8e6510359ea3ce066))
+
 # [1.5.0](https://github.com/garredow/kaios-lib/compare/v1.4.0...v1.5.0) (2022-03-26)
 
 
