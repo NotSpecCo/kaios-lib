@@ -6,6 +6,7 @@ import { FileStorage } from './modules/fileStorage';
 import { Geolocation } from './modules/geolocation';
 import { LocalStorage } from './modules/localStorage';
 import { Network } from './modules/network';
+import { QRCode } from './modules/qrCode';
 import { Volume } from './modules/volume';
 
 export * from './modules/activity';
@@ -16,6 +17,7 @@ export * from './modules/fileStorage';
 export * from './modules/geolocation';
 export * from './modules/localStorage';
 export * from './modules/network';
+export * from './modules/qrCode';
 export * from './modules/volume';
 
 export default class KaiOS {
@@ -27,5 +29,6 @@ export default class KaiOS {
   static Geolocation = Geolocation;
   static LocalStorage = LocalStorage;
   static Network = Network;
+  static QRCode = QRCode;
   static Volume = Volume;
 }

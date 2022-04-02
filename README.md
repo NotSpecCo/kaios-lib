@@ -118,6 +118,16 @@ network.subscribe((status) => console.log('got status', status));
 network.unsubscribe();
 ```
 
+### QRCode
+
+```js
+// Create the service
+const qrCode = new KaiOS.QRCode();
+
+// Read QR code as text
+const text = await qrCode.readAsText();
+```
+
 ### Volume
 
 ```js
